@@ -1,0 +1,125 @@
+---
+interface Props {
+  surveyUrl?: string;
+}
+
+const { surveyUrl = 'https://forms.gle/your-survey-link' } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<a href={surveyUrl} target="_blank" rel="noopener" class="llyli-widget" aria-label="Take the LLYLI survey">
+  <img src={`${baseUrl}llyli-widget.png`} alt="LLYLI Survey" />
+  <span class="llyli-tooltip">Help shape LLYLI!</span>
+</a>
+
+<style>
+  .llyli-widget {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:
+      0 4px 20px rgba(0,0,0,0.15),
+      0 8px 40px rgba(39,123,120,0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .llyli-widget img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .llyli-widget:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow:
+      0 8px 30px rgba(0,0,0,0.2),
+      0 16px 60px rgba(39,123,120,0.25);
+  }
+
+  .llyli-widget:hover img {
+    transform: scale(1.1);
+  }
+
+  .llyli-tooltip {
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--ink, #1f1f1f);
+    color: #fff;
+    font-family: var(--font-body, sans-serif);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.5rem 0.875rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  }
+
+  .llyli-tooltip::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: var(--ink, #1f1f1f);
+  }
+
+  .llyli-widget:hover .llyli-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Pulse animation */
+  .llyli-widget::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: rgba(224,112,88,0.3);
+    z-index: -1;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .llyli-widget {
+      width: 56px;
+      height: 56px;
+      bottom: 1.5rem;
+      left: 1.5rem;
+    }
+
+    .llyli-tooltip {
+      display: none;
+    }
+  }
+
+  @media print {
+    .llyli-widget {
+      display: none;
+    }
+  }
+</style>

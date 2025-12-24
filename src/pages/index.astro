@@ -6,6 +6,7 @@ import Card from '../components/Card.astro';
 import SkillGroup from '../components/SkillGroup.astro';
 import LanguageGrid from '../components/LanguageGrid.astro';
 import Footer from '../components/Footer.astro';
+import LLYLIWidget from '../components/LLYLIWidget.astro';
 
 import yaml from 'js-yaml';
 import fs from 'fs';
@@ -188,4 +189,5 @@ const profile = yaml.load(profileContent) as any;
   </main>
 
   <Footer name={profile.meta.name} email={profile.meta.email} />
+  <LLYLIWidget surveyUrl="https://forms.gle/your-survey-link" />
 </Layout>

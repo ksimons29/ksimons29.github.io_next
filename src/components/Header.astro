@@ -10,13 +10,14 @@ interface Props {
 }
 
 const { name, title, email, linkedin, github, whatsapp, image } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <header id="header">
   <div class="header-container">
     {image && (
       <div class="header-profile">
-        <img src={image} alt={name} />
+        <img src={`${baseUrl}${image.startsWith('/') ? image.slice(1) : image}`} alt={name} />
       </div>
     )}
     <div class="header-text">
