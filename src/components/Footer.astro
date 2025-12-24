@@ -1,0 +1,75 @@
+---
+interface Props {
+  name: string;
+  email: string;
+}
+
+const { name, email } = Astro.props;
+---
+
+<footer>
+  <div class="footer-container">
+    <p class="footer-name">{name}</p>
+    <p class="footer-contact">
+      <a href={`mailto:${email}`}>{email}</a>
+    </p>
+    <p class="footer-note">References available on request</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: var(--space-2xl) var(--space-lg);
+    margin-top: var(--space-2xl);
+    position: relative;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+  }
+
+  .footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-contact {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-note {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: var(--space-sm);
+  }
+
+  footer a {
+    color: var(--gold);
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #fff;
+    border-bottom-color: var(--gold);
+  }
+</style>

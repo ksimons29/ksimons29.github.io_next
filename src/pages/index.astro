@@ -1,0 +1,191 @@
+---
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import SkillGroup from '../components/SkillGroup.astro';
+import LanguageGrid from '../components/LanguageGrid.astro';
+import Footer from '../components/Footer.astro';
+
+import yaml from 'js-yaml';
+import fs from 'fs';
+import path from 'path';
+
+// Load profile data
+const profilePath = path.join(process.cwd(), 'src/content/profile.yml');
+const profileContent = fs.readFileSync(profilePath, 'utf8');
+const profile = yaml.load(profileContent) as any;
+---
+
+<Layout title={profile.meta.siteTitle} description={profile.meta.description}>
+  <Header
+    name={profile.meta.name}
+    title={profile.meta.title}
+    email={profile.meta.email}
+    linkedin={profile.meta.linkedin}
+    github={profile.meta.github}
+    whatsapp={profile.meta.whatsapp}
+    image={profile.meta.image}
+  />
+
+  <main>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <h2>About Me</h2>
+      <div class="about-content" set:html={profile.about.intro.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+
+      <div class="highlight-blocks">
+        {profile.about.highlights.map((highlight: any) => (
+          <div class="highlight-card">
+            <span class="highlight-icon">{highlight.emoji}</span>
+            <h4>{highlight.title}</h4>
+            <p>{highlight.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Current Work -->
+    <Section title="Current Work" id="current-work">
+      {profile.currentWork.map((work: any) => (
+        <Card
+          title={work.project}
+          subtitle={work.type}
+          date={work.duration}
+          link={work.link}
+        >
+          {work.quote && <p><em>{work.quote}</em></p>}
+          <p set:html={work.description.replace(/\n/g, '<br/>')} />
+          {work.learnings && (
+            <>
+              <p><strong>What I'm learning:</strong></p>
+              <ul>
+                {work.learnings.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </>
+          )}
+          {work.note && <p><em>{work.note}</em></p>}
+        </Card>
+      ))}
+    </Section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+      <h2>Available for Consulting & Flex Projects</h2>
+      <p class="services-intro">{profile.services.intro}</p>
+
+      <div class="service-cards">
+        {profile.services.items.map((service: any) => (
+          <div class="service-card">
+            <h4>{service.title}</h4>
+            <p>{service.description}</p>
+            <span class="engagement-type">{service.engagement}</span>
+          </div>
+        ))}
+      </div>
+
+      <div class="services-cta">
+        <p>
+          Interested? <a href={`mailto:${profile.services.cta.email}`}>Let's discuss your needs</a>
+          {profile.services.cta.calendly && (
+            <> or <a href={profile.services.cta.calendly} target="_blank" rel="noopener">book a 20-min call</a></>
+          )}.
+        </p>
+      </div>
+    </section>
+
+    <!-- Selected Outcomes -->
+    <Section title="Selected Outcomes" id="outcomes">
+      {profile.outcomes.map((outcome: any) => (
+        <Card
+          title={outcome.title}
+          subtitle={outcome.subtitle}
+          date={outcome.date}
+        >
+          <p><strong>Challenge:</strong> {outcome.challenge}</p>
+          <p><strong>What I Did:</strong></p>
+          <ul>
+            {outcome.actions.map((action: string) => (
+              <li>{action}</li>
+            ))}
+          </ul>
+          <p><strong>Impact:</strong></p>
+          <ul>
+            {outcome.impact.map((item: string) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </Card>
+      ))}
+    </Section>
+
+    <!-- Experience -->
+    <Section title="Experience" id="experience">
+      {profile.experience.map((exp: any) => (
+        <Card
+          title={exp.company}
+          subtitle={exp.role}
+          date={exp.dates}
+          link={exp.link}
+        >
+          <p>{exp.summary}</p>
+          {exp.projects && (
+            <>
+              <p><strong>Key Client Projects:</strong></p>
+              {exp.projects.map((project: any) => (
+                <p>
+                  <strong>{project.client}</strong> ({project.years}) — {project.role}<br/>
+                  {project.description}
+                </p>
+              ))}
+            </>
+          )}
+        </Card>
+      ))}
+    </Section>
+
+    <!-- Skills -->
+    <Section title="Core Skills" id="skills">
+      <div class="skills-section">
+        {profile.skills.map((skill: any) => (
+          <SkillGroup
+            category={skill.category}
+            emoji={skill.emoji}
+            items={skill.items}
+          />
+        ))}
+      </div>
+    </Section>
+
+    <!-- Education -->
+    <Section title="Education & Upskilling" id="education">
+      {profile.education.map((edu: any) => (
+        <Card
+          title={edu.institution}
+          subtitle={edu.program}
+          date={edu.date}
+        >
+          <p>{edu.description}</p>
+        </Card>
+      ))}
+    </Section>
+
+    <!-- Beyond Work -->
+    <Section title="Beyond Work" id="beyond-work">
+      <div class="beyond-work-content">
+        {profile.beyondWork.map((item: string) => (
+          <p>{item}</p>
+        ))}
+      </div>
+    </Section>
+
+    <!-- Languages -->
+    <Section title="Languages" id="languages">
+      <LanguageGrid languages={profile.languages} />
+    </Section>
+  </main>
+
+  <Footer name={profile.meta.name} email={profile.meta.email} />
+</Layout>

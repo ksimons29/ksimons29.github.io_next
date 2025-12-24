@@ -1,0 +1,204 @@
+# Site Meta
+meta:
+  name: "Koos Simons"
+  title: "Product Manager — Lisbon"
+  email: "koossimons91@gmail.com"
+  linkedin: "koossimons"
+  github: "ksimons29"
+  whatsapp: "+351123456789"
+  image: "/profile.jpg"
+  siteTitle: "Koos Simons — Product Manager • Lisbon"
+  description: "Product Manager based in Lisbon with 6 years PM experience building products that turn complex problems into solutions people actually adopt. Currently upskilling through VibeCoding Lisboa and Carnegie Mellon's Advanced PM Program."
+
+# About Section
+about:
+  intro: |
+    Product Manager with ~6 years in product roles who builds products people actually
+    use—from GenAI assistants to analytics platforms. Based in **Lisbon** after walking
+    part of the Camino. Currently completing **Carnegie Mellon's Advanced PM Program**
+    and building an AI language learning app through **VibeCoding Lisboa**. I lead
+    discovery, ship fast, and make data useful.
+  highlights:
+    - icon: "target"
+      emoji: "🎯"
+      title: "Product Discovery & Delivery"
+      description: "Led 40+ user interviews, shipped GenAI assistant with 200+ users in 3 months. I turn fuzzy problems into shipped products."
+    - icon: "robot"
+      emoji: "🤖"
+      title: "Data & AI Systems"
+      description: "Built RAG-based tools, analytics platforms, and governance models at Nike, Rabobank, KPN. I make data useful."
+    - icon: "handshake"
+      emoji: "🤝"
+      title: "Cross-Functional Leadership"
+      description: "Coordinated business, engineering, and design across 4 industries. I get alignment without the meetings."
+
+# Current Work
+currentWork:
+  - project: "Learn the Language You Live In (LLYLI)"
+    type: "Personal Project | VibeCoding Lisboa"
+    duration: "2025 - Present"
+    link: "github.com/ksimons29"
+    quote: "Building an AI-powered language learning app that captures words from your daily life"
+    description: |
+      Creating a mobile app that captures words and phrases from your environment (menus,
+      signs, conversations) and turns them into personalized spaced-repetition flashcards.
+    learnings:
+      - "End-to-end product development (discovery → design → build → test)"
+      - "GenAI integration (OCR, translation APIs, prompt engineering)"
+      - "Mobile-first UX for language learners"
+      - "Go-to-market strategy for consumer apps"
+    note: "Part of hands-on upskilling through VibeCoding Lisboa's product community."
+
+# Consulting Services
+services:
+  intro: "Beyond full-time roles, I'm available for short-term consulting, interim assignments, and project-based work."
+  items:
+    - title: "Data Governance Setup"
+      description: "Design federated governance models, quality scorecards, and stewardship programs. Ideal for organizations starting their governance journey or fixing what's broken."
+      engagement: "2-6 month engagements"
+    - title: "Data Management Consulting"
+      description: "Platform selection, implementation oversight, and adoption strategy for analytics and data tools. I bridge the gap between business needs and technical solutions."
+      engagement: "Project-based or retainer"
+    - title: "Product & Project Leadership"
+      description: "Interim PM/PO for teams shipping data products, AI tools, or internal platforms. I get teams unstuck and products shipped."
+      engagement: "Interim or part-time"
+  cta:
+    email: "koossimons91@gmail.com"
+    calendly: "https://calendly.com/your-link"
+
+# Selected Outcomes
+outcomes:
+  - title: "GenAI Knowledge Assistant"
+    subtitle: "B2B Product | Financial Services"
+    date: "2024"
+    challenge: "Teams wasting 2+ hours daily searching fragmented documentation across multiple systems."
+    actions:
+      - "Led discovery with 40+ user interviews across 6 departments"
+      - "Designed RAG-based solution using Azure OpenAI"
+      - "Built evaluation framework for answer quality and relevance"
+      - "Ran phased rollout with usage tracking and feedback loops"
+    impact:
+      - "30% reduction in search time"
+      - "200+ active users within 3 months"
+      - "4.2/5 user satisfaction score"
+  - title: "Self-Service Analytics Platform"
+    subtitle: "Data Product | Retail"
+    date: "2023"
+    challenge: "BI team drowning in 200+ custom report requests per quarter, blocking decision-making speed."
+    actions:
+      - "Ran comparative evaluation of 5 platforms (technical + UX criteria)"
+      - "Built TCO business case that got leadership buy-in"
+      - "Led cross-functional implementation and rollout"
+      - "Designed training strategy and adoption metrics"
+    impact:
+      - "40% faster report creation time"
+      - "120+ business users self-serving within 6 months"
+      - "Request backlog cleared in 90 days"
+  - title: "Data Governance Operating Model"
+    subtitle: "Platform Product | Banking"
+    date: "2022-2023"
+    challenge: "Fragmented data governance causing compliance gaps, slow approvals, and frustrated data teams."
+    actions:
+      - "Designed federated governance model with clear ownership"
+      - "Built visible quality scorecard (gamified improvement)"
+      - "Launched data stewardship community across 8 business units"
+      - "Created lightweight process that balanced control with speed"
+    impact:
+      - "85% policy adoption in 6 months"
+      - "Quality scores improved from 60% → 85%"
+      - "Approval process reduced from 4 weeks → 1 week"
+
+# Experience
+experience:
+  - company: "Cognizant"
+    role: "Product Manager & Consulting Manager"
+    dates: "2016 - Oct 2025"
+    link: "https://cognizant.com"
+    summary: "Partnered with clients across banking, retail, telecom, and public sector to ship data products, analytics platforms, and AI tools. Grew from BI consultant to consulting manager, leading cross-functional teams from discovery to rollout."
+    projects:
+      - client: "Rabobank"
+        years: "2022-2024"
+        role: "Product Manager"
+        description: "Led GenAI assistant for policy/compliance search. 40+ user interviews, RAG pipeline design, ~95% answer accuracy. Also designed data governance operating model."
+      - client: "Nike EMEA"
+        years: "2021-2022"
+        role: "Product Manager"
+        description: "Scaled self-service analytics platform to 2,000+ users. Decision speed +25%, data inconsistencies -40%. Built business cases and led cross-functional rollout."
+      - client: "KPN"
+        years: "2019-2021"
+        role: "Product Owner"
+        description: "Managed customer data platforms and analytics tools for telecom operations. Prioritized backlogs, ran discovery, coordinated business and engineering teams."
+      - client: "Gemeente Amsterdam"
+        years: "2017-2019"
+        role: "Business Analyst"
+        description: "Supported digital transformation for municipal services. Requirements gathering, process mapping, stakeholder alignment for citizen-facing platforms."
+
+# Skills
+skills:
+  - category: "Product Management"
+    emoji: "🎯"
+    items:
+      - "Discovery & Framing"
+      - "Roadmapping"
+      - "Prioritization"
+      - "Experimentation"
+      - "Stakeholder Alignment"
+      - "Go-to-Market"
+  - category: "Data & AI"
+    emoji: "📊"
+    items:
+      - "GenAI / RAG"
+      - "Analytics Platforms"
+      - "Data Governance"
+      - "LLM Evaluation"
+      - "Prompt Engineering"
+  - category: "Tools"
+    emoji: "🛠️"
+    items:
+      - "SQL"
+      - "Power BI"
+      - "Jira"
+      - "Azure OpenAI"
+      - "Collibra"
+      - "Snowflake"
+
+# Education
+education:
+  - institution: "Carnegie Mellon University"
+    program: "Advanced Product Management Program"
+    date: "2025"
+    description: "Intensive program covering discovery frameworks, roadmapping, experimentation, metrics, and product leadership for senior PM roles."
+  - institution: "VibeCoding Lisboa"
+    program: "Product Community & Hands-On Building"
+    date: "2025"
+    description: "Active in Lisbon's product and tech community. Currently building \"Learn the Language You Live In\" (LLYLI)—an AI-powered language learning app—as part of hands-on upskilling in end-to-end product development."
+  - institution: "Fontys University"
+    program: "Bachelor of Commerce"
+    date: "2013 - 2017"
+    description: "Focus on business analysis, project management, and organizational change. Graduated with honors in Strategic Management."
+
+# Beyond Work
+beyondWork:
+  - "Board member and saxophonist in a Lisbon-based big band—handling everything from concert logistics to community building."
+  - "I help my family's toy shop back in the Netherlands with digital marketing and inventory systems."
+  - "Recently walked part of the Camino de Santiago (Portuguese route) before settling in Lisbon."
+  - "Always up for live music, trail hiking, and conversations about how products actually get built (and adopted)."
+
+# Languages
+languages:
+  - name: "Dutch"
+    level: "Native"
+    flag: "🇳🇱"
+    percentage: 100
+  - name: "English"
+    level: "Full Professional"
+    flag: "🇬🇧"
+    percentage: 95
+  - name: "Portuguese"
+    level: "Limited Working"
+    flag: "🇵🇹"
+    percentage: 45
+  - name: "German"
+    level: "Limited Working"
+    flag: "🇩🇪"
+    percentage: 40

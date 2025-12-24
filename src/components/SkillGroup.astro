@@ -1,0 +1,18 @@
+---
+interface Props {
+  category: string;
+  emoji?: string;
+  items: string[];
+}
+
+const { category, emoji, items } = Astro.props;
+---
+
+<div class="skill-group">
+  <h4>{emoji && <span>{emoji}</span>} {category}</h4>
+  <div class="skill-tags">
+    {items.map((item) => (
+      <span>{item}</span>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,29 @@
+---
+interface Language {
+  name: string;
+  level: string;
+  flag: string;
+  percentage: number;
+}
+
+interface Props {
+  languages: Language[];
+}
+
+const { languages } = Astro.props;
+---
+
+<div class="languages-grid">
+  {languages.map((lang) => (
+    <div class="language-item">
+      <span class="language-flag">{lang.flag}</span>
+      <div class="language-info">
+        <span class="language-name">{lang.name}</span>
+        <span class="language-level">{lang.level}</span>
+      </div>
+      <div class="language-bar">
+        <div class="language-progress" style={`width: ${lang.percentage}%`}></div>
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  date?: string;
+  link?: string;
+}
+
+const { title, subtitle, date, link } = Astro.props;
+---
+
+<article class="card">
+  <div class="card-header">
+    <div class="card-meta">
+      <h3 class="card-title">{title}</h3>
+      {subtitle && <p class="card-subtitle">{subtitle}</p>}
+      {link && (
+        <p class="card-link">
+          <a href={link.startsWith('http') ? link : `https://${link}`} target="_blank" rel="noopener">
+            {link.replace(/^https?:\/\//, '')}
+          </a>
+        </p>
+      )}
+    </div>
+    {date && <span class="card-date">{date}</span>}
+  </div>
+  <div class="card-content">
+    <slot />
+  </div>
+</article>
+
+<style>
+  .card-link {
+    margin: var(--space-xs) 0 0 0;
+  }
+
+  .card-link a {
+    font-size: 0.8125rem;
+    color: var(--gold);
+  }
+
+  .card-link a:hover {
+    color: var(--wine);
+  }
+</style>
