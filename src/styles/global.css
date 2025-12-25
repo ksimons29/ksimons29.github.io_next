@@ -288,6 +288,7 @@ h2::before {
   height: 2rem;
   display: block;
   margin-bottom: 0.375rem;
+  color: var(--navy);
 }
 
 .highlight-card h4 {
