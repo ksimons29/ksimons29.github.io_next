@@ -13,24 +13,28 @@ meta:
 # About Section
 about:
   intro: |
-    Product Manager with ~6 years in product roles who builds products people actually
-    use—from GenAI assistants to analytics platforms. Based in **Lisbon** after walking
-    part of the Camino. Currently completing **Carnegie Mellon's Advanced PM Program**
-    and building an AI language learning app through **VibeCoding Lisboa**. I lead
-    discovery, ship fast, and make data useful.
+    **6 years shipping products, 3+ years in strategy & consulting**
+
+    I structure messy problems into products people actually use. Built across retail,
+    finance, and manufacturing, leading with real usage and outcomes that prove things
+    work. My consulting background means I'm comfortable with complexity: stakeholder
+    alignment, ambiguous briefs, data-heavy environments.
+
+    Currently building LLYLI, a language learning app → check the button on the left
+    to help me with my research, and completing Carnegie Mellon's PM Program. Based in Lisbon.
   highlights:
-    - icon: "target"
-      emoji: "🎯"
-      title: "Product Discovery & Delivery"
-      description: "Led 40+ user interviews, shipped GenAI assistant with 200+ users in 3 months. I turn fuzzy problems into shipped products."
-    - icon: "robot"
-      emoji: "🤖"
-      title: "Data & AI Systems"
-      description: "Built RAG-based tools, analytics platforms, and governance models at Nike, Rabobank, KPN. I make data useful."
+    - icon: "search"
+      emoji: "🔍"
+      title: "Discovery to Release"
+      description: "Turned unclear requests into an agreed first release. Combined interviews, workflow and journey mapping, and a quick maturity check to separate a product problem from a capability gap. Defined outcomes, constraints, and tradeoffs, then translated that into scope and priorities the team could ship."
+    - icon: "chart"
+      emoji: "📊"
+      title: "Data & AI Products"
+      description: "Built data and AI product features from MVP to iteration. Defined success metrics and quality checks early, then used usage signals and structured feedback with domain experts to decide what to change next."
     - icon: "handshake"
       emoji: "🤝"
-      title: "Cross-Functional Leadership"
-      description: "Coordinated business, engineering, and design across 4 industries. I get alignment without the meetings."
+      title: "Delivery & Stakeholder Leadership"
+      description: "Kept delivery moving by making decisions explicit and ownership clear. Aligned product, engineering, and business stakeholders through tight written updates, prioritization, and unblocking, so work shipped in focused increments."
 
 # Current Work
 currentWork:
