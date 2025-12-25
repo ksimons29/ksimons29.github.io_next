@@ -23,16 +23,13 @@ about:
     Currently building LLYLI, a language learning app → check the button on the left
     to help me with my research, and completing Carnegie Mellon's PM Program. Based in Lisbon.
   highlights:
-    - icon: "search"
-      emoji: "🔍"
+    - icon: "/Discovery.svg"
       title: "Discovery to Release"
       description: "Turned unclear requests into an agreed first release. Combined interviews, workflow and journey mapping, and a quick maturity check to separate a product problem from a capability gap. Defined outcomes, constraints, and tradeoffs, then translated that into scope and priorities the team could ship."
-    - icon: "chart"
-      emoji: "📊"
+    - icon: "/Data.svg"
       title: "Data & AI Products"
       description: "Built data and AI product features from MVP to iteration. Defined success metrics and quality checks early, then used usage signals and structured feedback with domain experts to decide what to change next."
-    - icon: "handshake"
-      emoji: "🤝"
+    - icon: "/Collaboration.svg"
       title: "Delivery & Stakeholder Leadership"
       description: "Kept delivery moving by making decisions explicit and ownership clear. Aligned product, engineering, and business stakeholders through tight written updates, prioritization, and unblocking, so work shipped in focused increments."
 

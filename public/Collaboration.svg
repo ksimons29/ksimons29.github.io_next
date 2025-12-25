@@ -1,0 +1,10 @@
+<!-- LOGO 3: Cross-Functional Leadership (3 people + link) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28" fill="none" role="img" aria-label="Cross-Functional Leadership">
+  <circle cx="32" cy="24" r="6.5" stroke="currentColor" stroke-width="3.5"></circle>
+  <circle cx="18" cy="28" r="5.5" stroke="currentColor" stroke-width="3.5"></circle>
+  <circle cx="46" cy="28" r="5.5" stroke="currentColor" stroke-width="3.5"></circle>
+  <path d="M20 48c1.4-7.2 7-12 14-12s12.6 4.8 14 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path>
+  <path d="M10.5 48c.9-5.6 4.7-9.4 9.5-10.6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path>
+  <path d="M53.5 48c-.9-5.6-4.7-9.4-9.5-10.6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path>
+  <path d="M24 40l8 6 8-6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

@@ -38,7 +38,7 @@ const profile = yaml.load(profileContent) as any;
       <div class="highlight-blocks">
         {profile.about.highlights.map((highlight: any) => (
           <div class="highlight-card">
-            <span class="highlight-icon">{highlight.emoji}</span>
+            <img src={highlight.icon} alt={highlight.title} class="highlight-icon" />
             <h4>{highlight.title}</h4>
             <p>{highlight.description}</p>
           </div>

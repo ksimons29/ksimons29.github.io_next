@@ -1,0 +1,10 @@
+<!-- LOGO 2: Data & AI Systems (Chip + neural nodes) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="28" height="28" fill="none" role="img" aria-label="Data &amp; AI Systems">
+  <rect x="18" y="18" width="28" height="28" rx="7" stroke="currentColor" stroke-width="3.5"></rect>
+  <path d="M24 10v8M32 10v8M40 10v8M24 46v8M32 46v8M40 46v8M10 24h8M10 32h8M10 40h8M46 24h8M46 32h8M46 40h8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"></path>
+  <circle cx="28" cy="28" r="2.2" fill="currentColor"></circle>
+  <circle cx="36" cy="28" r="2.2" fill="currentColor"></circle>
+  <circle cx="28" cy="36" r="2.2" fill="currentColor"></circle>
+  <circle cx="36" cy="36" r="2.2" fill="currentColor"></circle>
+  <path d="M30.2 28h3.6M28 30.2v3.6M36 30.2v3.6M30.2 36h3.6" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+</svg>
